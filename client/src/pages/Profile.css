@@ -1,0 +1,778 @@
+
+/* ========================================
+   PROFILE PAGE LAYOUT
+======================================== */
+
+.profile-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  box-sizing: border-box;
+}
+
+.profile-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  color: var(--text-secondary, #64748b);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-back-link:hover {
+  color: var(--primary, #4f46e5);
+}
+
+.profile-welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.profile-welcome h1 {
+  margin: 8px 0;
+  color: var(--text-primary, #172033);
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 750;
+}
+
+.profile-welcome p {
+  margin: 0;
+  color: var(--text-secondary, #64748b);
+  line-height: 1.6;
+}
+
+/* ========================================
+   PROFILE GRID AND CARDS
+======================================== */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.75fr) minmax(0, 1.7fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.profile-card {
+  min-width: 0;
+  padding: 26px;
+  box-sizing: border-box;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e8ebf2);
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.035);
+}
+
+.profile-summary-card {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+}
+
+.profile-details-card {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.profile-skills-card {
+  grid-column: 1 / -1;
+}
+
+/* ========================================
+   PROFILE AVATAR AND SUMMARY
+======================================== */
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 86px;
+  height: 86px;
+  margin: 4px auto 18px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #4f46e5, #818cf8);
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 750;
+}
+
+.profile-summary-card h2 {
+  margin: 0;
+  color: var(--text-primary, #172033);
+  font-size: 21px;
+  overflow-wrap: anywhere;
+}
+
+.profile-role {
+  margin: 8px 0 20px;
+  color: var(--text-secondary, #64748b);
+  font-size: 14px;
+}
+
+.profile-summary-divider {
+  height: 1px;
+  margin: 20px 0;
+  background: var(--border-color, #e8ebf2);
+}
+
+.profile-summary-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 17px 0;
+  color: var(--text-secondary, #64748b);
+  text-align: left;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.profile-summary-item svg {
+  flex-shrink: 0;
+  color: var(--primary, #4f46e5);
+}
+
+.profile-email-note {
+  margin: 22px 0 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   SECTION HEADINGS
+======================================== */
+
+.profile-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.profile-section-heading > svg {
+  flex-shrink: 0;
+  color: var(--primary, #4f46e5);
+}
+
+.profile-section-heading h2 {
+  margin: 0 0 7px;
+  color: var(--text-primary, #172033);
+  font-size: 18px;
+}
+
+.profile-section-heading p {
+  margin: 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   PROFILE FORM
+======================================== */
+
+.profile-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 21px;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.profile-field-full {
+  grid-column: 1 / -1;
+}
+
+.profile-field label {
+  color: var(--text-primary, #172033);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.profile-field input,
+.profile-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 13px;
+  border: 1px solid var(--border-color, #dfe3ec);
+  border-radius: 10px;
+  outline: none;
+  background: var(--input-bg, #ffffff);
+  color: var(--text-primary, #172033);
+  font: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.profile-field textarea {
+  resize: vertical;
+}
+
+.profile-field input:focus,
+.profile-field textarea:focus {
+  border-color: var(--primary, #6366f1);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.profile-field input:disabled,
+.profile-field textarea:disabled,
+.profile-field input:read-only {
+  background: var(--input-disabled-bg, #f8fafc);
+  color: var(--text-secondary, #64748b);
+  cursor: default;
+}
+
+.profile-field-hint {
+  color: var(--text-secondary, #64748b);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.profile-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border-color, #e8ebf2);
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.profile-primary-button,
+.profile-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 11px 17px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.profile-primary-button {
+  background: var(--primary, #4f46e5);
+  color: #ffffff;
+}
+
+.profile-primary-button:hover {
+  background: var(--primary-hover, #4338ca);
+}
+
+.profile-secondary-button {
+  background: #ffffff;
+  border-color: var(--border-color, #dfe3ec);
+  color: var(--text-primary, #172033);
+}
+
+.profile-secondary-button:hover {
+  background: #f8fafc;
+}
+
+.profile-primary-button:disabled,
+.profile-secondary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ========================================
+   SKILLS OVERVIEW
+======================================== */
+
+.profile-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.profile-skill-tag {
+  display: inline-flex;
+  padding: 8px 12px;
+  border: 1px solid #e0e7ff;
+  border-radius: 9px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.profile-no-skills {
+  color: var(--text-secondary, #64748b);
+  font-size: 14px;
+}
+
+.profile-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 24px;
+  padding: 15px;
+  border-radius: 11px;
+  background: #f8fafc;
+  color: #475569;
+}
+
+.profile-tip svg {
+  flex-shrink: 0;
+  color: #6366f1;
+}
+
+.profile-tip p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   RESUME UPLOAD SECTION
+======================================== */
+
+.profile-resume-card {
+  display: block;
+  width: 100%;
+  margin: 24px 0 0;
+  padding: 26px;
+  clear: both;
+  box-sizing: border-box;
+}
+
+.profile-resume-body {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.profile-resume-current {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 18px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 12px;
+  background: var(--surface-color, #f9fafb);
+}
+
+.profile-resume-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.profile-resume-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 150px;
+}
+
+.profile-resume-info strong {
+  color: var(--text-primary, #172033);
+  font-size: 14px;
+}
+
+.profile-resume-info span {
+  color: var(--text-secondary, #64748b);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.profile-resume-view {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.profile-resume-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.profile-resume-upload > label {
+  color: var(--text-primary, #172033);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-resume-upload input[type="file"] {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px dashed var(--border-color, #d1d5db);
+  border-radius: 10px;
+  background: var(--surface-color, #f9fafb);
+  color: var(--text-primary, #172033);
+  font: inherit;
+  font-size: 13px;
+}
+
+.profile-resume-upload .profile-primary-button {
+  margin-top: 4px;
+}
+
+.profile-resume-upload .profile-primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.profile-selected-file {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 13px;
+}
+
+.profile-selected-file > svg {
+  flex-shrink: 0;
+}
+
+.profile-selected-file span {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.profile-remove-file {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 7px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #b91c1c;
+  cursor: pointer;
+}
+
+.profile-remove-file:hover {
+  background: #fee2e2;
+}
+
+/* ========================================
+   ALERTS AND LOADING
+======================================== */
+
+.profile-alert {
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.profile-alert-error {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.profile-alert-success {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.profile-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  min-height: 260px;
+  color: var(--text-secondary, #64748b);
+}
+
+.profile-load-error {
+  text-align: center;
+}
+
+.profile-load-error p {
+  color: var(--text-secondary, #64748b);
+}
+
+/* ========================================
+   RESPONSIVE TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .profile-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .profile-summary-card {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 8px 18px;
+    align-items: center;
+    text-align: left;
+  }
+
+  .profile-summary-card .profile-avatar {
+    grid-row: span 2;
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    border-radius: 20px;
+  }
+
+  .profile-summary-card h2,
+  .profile-summary-card .profile-role {
+    margin: 0;
+  }
+
+  .profile-summary-divider,
+  .profile-summary-item,
+  .profile-email-note {
+    grid-column: 1 / -1;
+  }
+
+  .profile-summary-divider {
+    margin: 12px 0;
+  }
+
+  .profile-details-card {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .profile-skills-card {
+    grid-column: 1;
+  }
+
+  .profile-resume-card {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   RESPONSIVE MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+  .profile-content {
+    padding: 20px 15px;
+  }
+
+  .profile-welcome {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile-card {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .profile-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .profile-field-full {
+    grid-column: auto;
+  }
+
+  .profile-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .profile-form-actions button {
+    width: 100%;
+  }
+
+  .profile-section-heading h2 {
+    font-size: 16px;
+  }
+
+  .profile-resume-card {
+    width: 100%;
+    margin-top: 18px;
+    padding: 20px 16px;
+  }
+
+  .profile-resume-current {
+    align-items: flex-start;
+  }
+
+  .profile-resume-info {
+    min-width: 0;
+  }
+
+  .profile-resume-view {
+    width: 100%;
+  }
+
+  .profile-resume-upload input[type="file"] {
+    font-size: 12px;
+  }
+
+  .profile-resume-upload > .profile-primary-button {
+    width: 100%;
+  }
+}
+
+/* Allow the profile page to scroll vertically */
+.student-layout {
+  min-height: 100vh;
+  height: auto;
+  overflow: visible;
+}
+
+.student-main {
+  min-height: 100vh;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.profile-content {
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
+}
+
+/* Keep the Resume card below Skills Overview */
+.profile-resume-card {
+  position: relative;
+  display: block;
+  clear: both;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+/* Floating toast notifications */
+.profile-toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  max-width: min(420px, calc(100vw - 32px));
+  padding: 15px 16px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.16);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  animation: profile-toast-enter 0.25s ease-out;
+}
+
+.profile-toast-success {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.profile-toast-error {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.profile-toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: currentColor;
+  color: inherit;
+  font-weight: 700;
+}
+
+/* Keep the icon's symbol readable */
+.profile-toast-success .profile-toast-icon {
+  background: #dcfce7;
+}
+
+.profile-toast-error .profile-toast-icon {
+  background: #fee2e2;
+}
+
+.profile-toast-close {
+  flex-shrink: 0;
+  margin-left: 8px;
+  padding: 0 4px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 23px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@keyframes profile-toast-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-toast {
+    top: 12px;
+    right: 12px;
+    max-width: calc(100vw - 24px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-toast {
+    animation: none;
+  }
+}
