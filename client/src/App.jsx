@@ -26,7 +26,7 @@ import OfficerDashboard from "./pages/OfficerDashboard";
 import CreateOpportunity from "./pages/CreateOpportunity";
 import Applications from "./pages/Applications";
 import StudentApplications from "./pages/StudentApplications";
-import Profile from "./pages/Profile";
+import Profile from "./pages/profile";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 
